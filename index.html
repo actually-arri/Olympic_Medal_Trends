@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+  <head>
+    <meta name="description"
+      content="An interactive exploration of Olympic medal
+      distribution, host nation performance and sporting
+      trends from 1896 to 2016." />
+    <title>Olympic Medal Trends | 1896–2016</title>
+    <meta charset="utf-8" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+  </head>
+  <body class="subpage">
+    <!-- Header -->
+    <header id="header">
+      <div class="logo">
+        <a href="index.html">Olympic <span>Medal Trends</span></a>
+      </div>
+      <a href="#menu">Menu</a>
+    </header>
+    <!-- Nav -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#visualizations">Visualizations</a></li>
+        <li><a href="#tasks">Supported Tasks</a></li>
+        <li><a href="#methodology">Design & Methodology</a></li>
+        <li><a href="#credits">Credits</a></li>
+      </ul>
+    </nav>
+    <!-- One -->
+    <section id="One" class="wrapper style3">
+      <div class="inner">
+        <header class="align-center">
+          <h1>Olympic Medal Trends</h1>
+          <p>Geography, Seasonality and Host Nation Performance</p>
+          <p>1896–2016</p>
+          <h2>Sri Chaitanya Bonthula</h2>
+        </header>
+      </div>
+    </section>
+    <!-- Two -->
+    <section id="two" class="wrapper style2">
+      <div class="inner">
+        <div class="box">
+          <div class="content">
+            <header class="align-center">
+              <h2>Geography & Seasons</h2>
+            </header>
+            <p class="align-center">
+              The visualizations below explore Olympic team performance across
+              different host cities and seasons from 1896 to 2016. The data is
+              visualized using pie charts, bar charts, line charts, heat maps,
+              and scatter plots. This dashboard explores patterns in medal
+              distribution, host city advantages, and sport-specific
+              contributions to overall success. These visualizations allow users
+              to filter by host city, season (Summer vs. Winter), and sport to
+              examine trends and disparities in medal counts. Following are the
+              research questions supported by the visualizations:
+            </p>
+
+            <ul>
+              <li>
+                <strong
+                  >Do host teams experience a medal boost across sports in their
+                  host cities when compared to non-host teams?</strong
+                >
+              </li>
+              <li>
+                <strong
+                  >Which sports contribute the most to a team's overall medal
+                  count, and how does this vary by host city and season?</strong
+                >
+              </li>
+              <li>
+                <strong
+                  >How does the number of teams that win medals vary by host
+                  city, and are there cities where medals are more concentrated
+                  among fewer teams?</strong
+                >
+              </li>
+            </ul>
+            <div>
+              <button onclick="resetChart()" class="reset-button">
+                Reset Charts
+              </button>
+
+              <script>
+                function resetChart() {
+                  // Reset the charts
+                  location.reload();
+                }
+              </script>
+            </div>
+            <p class="align-center">
+              The first view is a 3 chart dashboard comprising two pie charts
+              and a bar chart. The first pie chart displays the Host Team based
+              on Host City. The bar chart shows the top N (usually 20 but some
+              sports have less than 20 teams competing) teams for a given sport.
+              We can then click on the bars to see a breakdown of medal
+              distribution for the selected Team. We can then compare
+              distribution and medal counts between the Host Team and other
+              Non-Host Teams and if they rank in the top N teams for that sport.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart1a.html"
+                title="Host and non-host Olympic medal comparison"
+                width="1150"
+                height="600"
+                loading="lazy">
+              </iframe>
+            </div>
+            <p class="align-center">
+              The second view is an Interval Selection for a date range. We can
+              select a date range and we get a more granular view of the overall
+              trend in medal count for Host Teams vs Non-Host Teams.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart1b.html"
+                width="1120"
+                height="650"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              The third view is Heatmap with Season, Sport and Host City
+              filters. This shows which sports contribute the most to a Teams
+              overall medal count for any given city. This is useful to find
+              outliers or identify which sports some Teams are strong/weak in
+              and compare performance in different cities.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart2.html"
+                width="1190"
+                height="570"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              The fourth view is a bi-directionally linked dashboard of a
+              scatter plot and bar chart. Users can control the number for Teams
+              they want to see (1-30). Users can also brush over the scatterplot
+              or click on a city to see a detailed view of the number of teams
+              that won medals and how many other cities had the same number of
+              teams win and vice versa with the bar chart. We also have a custom
+              colour scheme to have unique colours for each Team.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart3.html"
+                width="970"
+                height="500"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="two" class="wrapper style2">
+      <div class="inner">
+        <div class="box">
+          <div class="content">
+            <header class="align-center">
+              <h2>Tasks Supported</h2>
+            </header>
+            <p>
+              The visualizations above support the following tasks by employing
+              interactive scatterplots with linked detail brush charts,
+              interactive bar charts, heatmaps, and pie charts that dynamically
+              adapt based on user selections:
+            </p>
+
+            <ul>
+              <li>
+                <strong>Analyze Host Team Performance:</strong> To determine
+                whether host teams experience a medal boost in their home cities
+                compared to non-host teams, and how this varies between the
+                Summer and Winter Olympics.
+              </li>
+              <li>
+                <strong>Explore Medal Distribution by Sport:</strong> To
+                identify which sports contribute most to a team’s overall medal
+                count, and analyze how this varies across different host cities
+                and Olympic seasons.
+              </li>
+              <li>
+                <strong>Understand City-Specific Patterns:</strong> To analyse
+                whether certain host cities exhibit unique trends in medal
+                distribution or concentration of success.
+              </li>
+              <li>
+                <strong>Explore Host vs. Non-Host Trends Over Time:</strong> To
+                select a custom date range and compare the long-term trends in
+                medal performance between Host and Non-Host teams.
+              </li>
+              <li>
+                <strong>Drill Down by City, Team, or Sport:</strong> To
+                interactively select and explore specific teams, cities, or
+                sports, revealing granular patterns in medal counts,
+                distribution, and performance using linked charts and filters.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="two" class="wrapper style2">
+      <div class="inner">
+        <div class="box">
+          <div class="content">
+            <header class="align-center">
+              <h2>Visualization Design Justification</h2>
+            </header>
+            <h3>Pie Chart and Linked Bar Chart</h3>
+            <ul>
+              <li>
+                <strong>Mark:</strong> The pie chart uses mark_arc() to
+                represent the Host Team's medal distribution (Gold, Silver,
+                Bronze). The bar chart uses mark_bar() to show the total number
+                of medals won by each of the top teams in a given sport.
+              </li>
+              <br />
+              <li>
+                <strong>Channels:</strong>
+                <br />
+                Pie chart:
+                <br />
+                Color hue is used to differentiate medal types (Gold, Silver,
+                Bronze).
+                <br />
+                We use area to encode the proportion of each medal type
+                representing their relative share of the total.
+                <br />
+                Text in the center conveys the total medal count, providing a
+                medal count summary.
+                <br />
+                <br />
+                Bar chart:
+                <br />
+                Height of each bar encodes the total number of medals won per
+                team, which is a magnitude channel.
+                <br />
+                Position along the horizontal axis shows different teams,
+                ordered by medal count.
+                <br />
+                Color hue identifies a host team and links to the legend on the
+                right (categorical encoding), bars are greyed-out before being
+                clicked on.
+                <br />
+                Tooltip shows more details when you hover over the data.
+              </li>
+              <br />
+              <li>
+                <strong>Characteristics of Channels:</strong> In both pie
+                charts, colour hue is used categorically to represent medal
+                types which are easily distinguishable. The use of area to
+                encode proportion is visually intuitive for users. The total
+                medal count is reinforced with a label at the center of each pie
+                chart. The middle bar chart uses bar length as an effective
+                quantitative channel for medal count, making it easy to compare
+                performance across teams. Teams are ordered by medal count,
+                leveraging position to help with readability. The selected team
+                is highlighted using a categorical colour scale indicated in the
+                legend. This dual use of colour, both to indicate host team
+                identity and to emphasize selection helps with expressivity. The
+                alignment of the charts allows for an intuitive left-to-right
+                comparison: host team on the left, global context in the middle,
+                and selected team on the right.
+              </li>
+              <br />
+              <li>
+                <strong>Interactivity:</strong> Users are able to select which
+                Sport and City they’d like to explore. Based on this, we might
+                see a pie chart that represents the cities Host Team (Sometimes
+                unavailable). We are also able to click on the bar chart to see
+                a detailed breakdown of medal distribution for a given Team in
+                another pie chart which pops up beside it. The number of teams
+                displayed on the bar chart will vary, based on how many teams
+                competed in the given filter selection (Sometimes very sparse)
+              </li>
+              <br />
+              <li>
+                <strong>Critique:</strong> This dashboard effectively answers
+                the research question due to its interactivity and side by side
+                chart views. For a given city, we are always able to see the
+                host team medal distribution for a given sport (if it exists).
+                Beside this, we see the next N top performing counties which
+                allows us to visually compare how the host team is fairing when
+                compared to others. We even get to dive into more detail if we
+                want to compare the host team with another team in particular
+                since we get medal breakdowns for each. A downfall of this
+                dashboard is the fact that some combinations of city and sport
+                result in very sparse plots or empty plots for host team. This
+                is not a bug but just how teams participate. A way to improve
+                would be to dynamically adjust the sport dropdown to only show
+                sports where we know a host team has participated based on city.
+              </li>
+            </ul>
+            <h3>Interval Selection Line Chart</h3>
+            <ul>
+              <li>
+                <strong>Mark:</strong> The line plot uses mark_line() to show
+                the trends of host vs non-host teams over the years while the
+                lower area chart uses mark_area().
+              </li>
+              <br />
+              <li>
+                <strong>Channels:</strong>
+                <br />
+                Main Line Chart:
+                <br />
+                The X-position is used to encode Year.
+                <br />
+                The Y-position is used to encode Medal Count.
+                <br />
+                I use color hue as a way to identify Host vs Non-Host Teams.
+                <br />
+                I use line style (Dotted vs solid) to encode host status.
+                <br />
+                We also have a tooltip to show additional details such as year
+                and medal count that might be hard to read.
+                <br />
+                <br />
+                Area Chart (Year Range Selector):
+                <br />
+                The X-position is used to encode Year, same as above for
+                brushing interaction.
+                <br />
+                The Y-position is used to encode Medal Count.
+                <br />
+                I use colour hue as a way to identify Host vs Non-Host Teams.
+                <br />
+                The area mark represents the cumulative medal count visually.
+              </li>
+              <br />
+              <li>
+                <strong>Characteristics of Channels:</strong> This dual-view
+                visualization uses position along the x-axis to represent time
+                (year) and the y-axis to represent medal count, both of which
+                are continuous and quantitative variables. Position is highly
+                effective here as it enables users to detect trends and changes
+                in medal counts over time with ease. Color hue is used to
+                distinguish between Host Teams and Non-Host Teams. In the upper
+                chart, line style (solid vs dotted) and point markers (circles)
+                further differentiate the two categories, enhancing readability.
+                In the area chart, the cumulative area under the curve provides
+                an effective summary of overall medal volume across time. This
+                area chart also serves as a time range selector, enhancing
+                interactivity. The visual encoding choices are clear and
+                perceptually effective and support both trend detection and
+                categorical comparison while adhering to principles of
+                expressiveness and effectiveness.
+              </li>
+              <br />
+              <li>
+                <strong>Interactivity:</strong> Here we have an Interval
+                selection line chart. We can brush across a year range on one of
+                the lower charts and we get a zoomed in view of that selection
+                in the upper charts.
+              </li>
+              <br />
+              <li>
+                <strong>Critique:</strong> This is quite a simple chart and
+                works together with the above chart to show general long term
+                trends. The interval selection works really well here given the
+                very large year range. One downfall is the redundant legend (I
+                could not figure out how to drop this)
+              </li>
+            </ul>
+            <h3>Heatmap</h3>
+            <ul>
+              <li>
+                <strong>Mark:</strong> The heatmap used mark_rect() to create a
+                heatmap based on medal count, for each sport and medal type.
+              </li>
+              <br />
+              <li>
+                <strong>Channels:</strong>
+                <br />
+                The X-position is used to encode Sport.
+                <br />
+                The Y-position is used to encode Medal Type.
+                <br />
+                We use a sequential colour scheme to encode the medal count.
+                <br />
+                The tooltip shows team, sport, medal type and medal count.
+              </li>
+              <br />
+              <li>
+                <strong>Characteristics of Channels:</strong> This heatmap uses
+                position on the x-axis to represent sports and medal types
+                (Gold, Silver, Bronze) on the y-axis, both of which are
+                categorical. The main encoding channel for medal count is colour
+                saturation using a perceptually sequential colour scale that
+                ranges from deep purple (low values) to bright yellow (high
+                values) and neon green for values over 20 (outliers or rare high
+                counts). This choice effectively conveys magnitude differences
+                in medal contributions, letting users detect patterns such as
+                performance in specific sports or a skew toward certain medal
+                types. The grid structure with shared boundaries between cells
+                helps in scanning rows and columns to identify patterns and
+                clusters while the ordered layout supports intuitive reading
+                from left to right (by sport) and top to bottom (by medal type).
+              </li>
+              <br />
+              <li>
+                <strong>Interactivity:</strong> By default we have both seasons,
+                all cities and teams shown. The user then has to decide the
+                season, city and team they’d like to explore. The season
+                selection is a radial button while city and team have a dropdown
+                due to the many options available. All these selections filter
+                the heatmap and will dynamically change. Some heatmaps may be
+                sparse, once again, due to not all teams always participating.
+                We also have a tooltip which provides additional information not
+                available at first glance.
+              </li>
+              <br />
+              <li>
+                <strong>Critique:</strong> This heatmap effectively answers the
+                research question as it visually shows us any “hot spots” which
+                would indicate a high medal count and thus show sports with the
+                largest medal contribution. As with the first view, some
+                combinations result in a blank heatmap since the team might have
+                not participated in the sport or season. A downfall that I found
+                difficult to navigate is the colour. We have a lot of sports
+                where medal counts were 1 while some had 60. This created a big
+                range leaving most of the heatmap one shade making it hard to
+                distinguish boundaries. To combat this, I have manually limited
+                the medal count in the scale so granular differences are more
+                pronounced.
+              </li>
+            </ul>
+            <h3>
+              Bi-directional Linked View between Scatterplot (with Brushing) and
+              Bar Chart
+            </h3>
+            <ul>
+              <li>
+                <strong>Mark:</strong> The scatter plot used mark_point() to
+                plot the number of teams vs average medals per team while the
+                bar chart used mark_bar() to show the number of teams for each
+                city and how many cities had the same number of teams win
+                medals.
+              </li>
+              <br />
+              <li>
+                <strong>Channels:</strong>
+                <br />
+                Scatter Plot:
+                <br />
+                The X-position is used to encode the number of teams that won
+                medals (ordered).
+                <br />
+                The Y-position is used to encode the average medals per team
+                (ordered).
+                <br />
+                The colour hue here distinguishes the various host cities.
+                <br />
+                The tooltip here shows the city, values from both axes, and
+                total medal count for that city.
+                <br />
+                <br />
+                Bar Chart:
+                <br />
+                The X-position is used to encode the number of teams (binned
+                into intervals).
+                <br />
+                The Y-position is used to encode the count of host cities.
+                <br />
+                The colour hue is used to encode the host city where each hue
+                corresponds to a city.
+              </li>
+              <br />
+              <li>
+                <strong>Characteristics of Channels:</strong> For this view, the
+                scatter plot uses position along the x- and y-axes to represent
+                quantitative variables, the number of teams that won medals and
+                the average number of medals per team. Position is one of the
+                most effective visual channels for interpreting numerical data,
+                allowing users to quickly compare values across host cities. The
+                categorical colour hue channel is used to distinguish between
+                host cities, enabling consistent identification of each city
+                across both charts. For the bar chart, bar height encodes the
+                count of host cities that fall into each binned range, which is
+                another highly effective channel for magnitude comparisons.
+                Although the x-axis in the bar chart uses binned intervals, this
+                grouping helps simplify distribution patterns without
+                overwhelming the user with granularities.
+              </li>
+              <br />
+              <li>
+                <strong>Interactivity:</strong> Here we have a bi-directionally
+                linked view. We are able to click on a city on the scatter plot
+                which displays just that city on the bar chart or brush over
+                points to see multiple cities on the bar chart. We can also
+                click on cities on the bar chart to locate them on the
+                scatterplot. This makes it easy to compare with other cities. We
+                also have the option to vary the number of cities we want to
+                see. This ranges from 1 to 30.
+              </li>
+              <br />
+              <li>
+                <strong>Critique:</strong> I think this viz answers the question
+                really well due to the juxtaposition of the two plots. The
+                scatterplot is great since it visually shows the distribution
+                which helps us easily identify outliers or clusters that might
+                interest us. The bar chart further gives us a simpler way to see
+                the number of cities that have x amount of teams win medals. The
+                brushing is useful as we get to explore data points of interest.
+                I have also chosen a custom colour palette here to accommodate
+                the 30 unique teams which clearly distinguishes each team.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
