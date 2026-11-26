@@ -1,0 +1,23 @@
+.iframe-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.iframe-container iframe {
+  display: block;
+  border: 0;
+  max-width: none;
+  margin-inline: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

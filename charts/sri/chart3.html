@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "hconcat": [{"mark": {"type": "point", "filled": true, "size": 100}, "encoding": {"color": {"condition": {"param": "param_8", "field": "City", "legend": {"title": "Host City"}, "scale": {"domain": ["Albertville", "Amsterdam", "Antwerpen", "Athina", "Atlanta", "Barcelona", "Beijing", "Berlin", "Helsinki", "Innsbruck", "Lillehammer", "London", "Los Angeles", "Melbourne", "Mexico City", "Montreal", "Moskva", "Munich", "Nagano", "Paris", "Rio de Janeiro", "Roma", "Salt Lake City", "Seoul", "Sochi", "Stockholm", "Sydney", "Tokyo", "Torino", "Vancouver"], "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5", "#c49c94", "#f7b6d2", "#c7c7c7", "#dbdb8d", "#9edae5", "#393b79", "#637939", "#8c6d31", "#843c39", "#7b4173", "#5254a3", "#6b6ecf", "#9c9ede", "#8ca252", "#bd9e39"]}, "type": "nominal"}, "value": "lightgray"}, "tooltip": [{"field": "City", "type": "nominal"}, {"field": "NumTeams", "type": "quantitative"}, {"field": "AvgMedalsPerTeam", "type": "quantitative"}, {"field": "TotalMedals", "type": "quantitative"}], "x": {"field": "NumTeams", "title": "Number of Teams That Won Medals", "type": "quantitative"}, "y": {"field": "AvgMedalsPerTeam", "title": "Average Medals per Team", "type": "quantitative"}}, "height": 300, "name": "view_5", "title": "How Are Medals Distributed Among Teams in Each Host City?", "transform": [{"window": [{"op": "rank", "field": "", "as": "rank"}], "sort": [{"field": "TotalMedals", "order": "descending"}]}, {"filter": "datum.rank <= city_count"}], "width": 300}, {"mark": {"type": "bar", "opacity": 0.6}, "encoding": {"color": {"condition": {"param": "param_8", "field": "City", "legend": {"title": "Host City"}, "scale": {"domain": ["Albertville", "Amsterdam", "Antwerpen", "Athina", "Atlanta", "Barcelona", "Beijing", "Berlin", "Helsinki", "Innsbruck", "Lillehammer", "London", "Los Angeles", "Melbourne", "Mexico City", "Montreal", "Moskva", "Munich", "Nagano", "Paris", "Rio de Janeiro", "Roma", "Salt Lake City", "Seoul", "Sochi", "Stockholm", "Sydney", "Tokyo", "Torino", "Vancouver"], "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5", "#c49c94", "#f7b6d2", "#c7c7c7", "#dbdb8d", "#9edae5", "#393b79", "#637939", "#8c6d31", "#843c39", "#7b4173", "#5254a3", "#6b6ecf", "#9c9ede", "#8ca252", "#bd9e39"]}, "type": "nominal"}, "value": "lightgray"}, "tooltip": [{"field": "City", "type": "nominal"}, {"field": "NumTeams", "type": "quantitative"}], "x": {"field": "binned_numteams", "title": "Number of Medal-Winning Teams (Binned)", "type": "nominal"}, "y": {"aggregate": "count", "axis": {"tickCount": 5}, "title": "Number of Host Cities", "type": "quantitative"}}, "height": 300, "name": "view_6", "title": "How Many Cities Had a Certain Number of Medal-Winning Teams?", "transform": [{"window": [{"op": "rank", "field": "", "as": "rank"}], "sort": [{"field": "TotalMedals", "order": "descending"}]}, {"filter": "datum.rank <= city_count"}, {"filter": {"param": "param_8"}}, {"filter": {"param": "param_9"}}, {"bin": {"step": 5}, "field": "NumTeams", "as": "binned_numteams"}], "width": 300}], "data": {"name": "data-6245eed66cc49981ac5c2b6e23b92945"}, "params": [{"name": "param_8", "select": {"type": "point", "fields": ["City"]}, "views": ["view_5", "view_6"]}, {"name": "city_count", "bind": {"input": "range", "max": 30, "min": 1, "name": "Number of Cities:", "step": 1}, "value": 10}, {"name": "param_9", "select": {"type": "interval"}, "views": ["view_5"]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-6245eed66cc49981ac5c2b6e23b92945": [{"City": "Albertville", "NumTeams": 20, "TotalMedals": 282, "AvgMedalsPerTeam": 14.1}, {"City": "Amsterdam", "NumTeams": 34, "TotalMedals": 703, "AvgMedalsPerTeam": 20.676470588235293}, {"City": "Antwerpen", "NumTeams": 22, "TotalMedals": 1202, "AvgMedalsPerTeam": 54.63636363636363}, {"City": "Athina", "NumTeams": 73, "TotalMedals": 2393, "AvgMedalsPerTeam": 32.78082191780822}, {"City": "Atlanta", "NumTeams": 78, "TotalMedals": 1797, "AvgMedalsPerTeam": 23.03846153846154}, {"City": "Barcelona", "NumTeams": 61, "TotalMedals": 1653, "AvgMedalsPerTeam": 27.098360655737704}, {"City": "Beijing", "NumTeams": 85, "TotalMedals": 1995, "AvgMedalsPerTeam": 23.470588235294116}, {"City": "Berlin", "NumTeams": 32, "TotalMedals": 875, "AvgMedalsPerTeam": 27.34375}, {"City": "Helsinki", "NumTeams": 42, "TotalMedals": 856, "AvgMedalsPerTeam": 20.38095238095238}, {"City": "Innsbruck", "NumTeams": 18, "TotalMedals": 329, "AvgMedalsPerTeam": 18.27777777777778}, {"City": "Lillehammer", "NumTeams": 22, "TotalMedals": 297, "AvgMedalsPerTeam": 13.5}, {"City": "London", "NumTeams": 93, "TotalMedals": 3299, "AvgMedalsPerTeam": 35.473118279569896}, {"City": "Los Angeles", "NumTeams": 55, "TotalMedals": 2084, "AvgMedalsPerTeam": 37.89090909090909}, {"City": "Melbourne", "NumTeams": 36, "TotalMedals": 826, "AvgMedalsPerTeam": 22.944444444444443}, {"City": "Mexico City", "NumTeams": 43, "TotalMedals": 1056, "AvgMedalsPerTeam": 24.558139534883722}, {"City": "Montreal", "NumTeams": 41, "TotalMedals": 1320, "AvgMedalsPerTeam": 32.19512195121951}, {"City": "Moskva", "NumTeams": 36, "TotalMedals": 1384, "AvgMedalsPerTeam": 38.44444444444444}, {"City": "Munich", "NumTeams": 47, "TotalMedals": 1210, "AvgMedalsPerTeam": 25.74468085106383}, {"City": "Nagano", "NumTeams": 24, "TotalMedals": 408, "AvgMedalsPerTeam": 17.0}, {"City": "Paris", "NumTeams": 36, "TotalMedals": 1019, "AvgMedalsPerTeam": 28.305555555555557}, {"City": "Rio de Janeiro", "NumTeams": 82, "TotalMedals": 1981, "AvgMedalsPerTeam": 24.158536585365855}, {"City": "Roma", "NumTeams": 40, "TotalMedals": 879, "AvgMedalsPerTeam": 21.975}, {"City": "Salt Lake City", "NumTeams": 24, "TotalMedals": 436, "AvgMedalsPerTeam": 18.166666666666668}, {"City": "Seoul", "NumTeams": 52, "TotalMedals": 1578, "AvgMedalsPerTeam": 30.346153846153847}, {"City": "Sochi", "NumTeams": 26, "TotalMedals": 555, "AvgMedalsPerTeam": 21.346153846153847}, {"City": "Stockholm", "NumTeams": 19, "TotalMedals": 817, "AvgMedalsPerTeam": 43.0}, {"City": "Sydney", "NumTeams": 78, "TotalMedals": 1956, "AvgMedalsPerTeam": 25.076923076923077}, {"City": "Tokyo", "NumTeams": 40, "TotalMedals": 999, "AvgMedalsPerTeam": 24.975}, {"City": "Torino", "NumTeams": 26, "TotalMedals": 484, "AvgMedalsPerTeam": 18.615384615384617}, {"City": "Vancouver", "NumTeams": 26, "TotalMedals": 478, "AvgMedalsPerTeam": 18.384615384615383}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
