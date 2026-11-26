@@ -1,3 +1,11 @@
+
+/* =================================
+   Olympic Medal Trends
+   Custom website styles
+   ================================= */
+
+/* Chart containers */
+
 .iframe-container {
   display: block;
   width: 100%;
@@ -12,12 +20,43 @@
   margin-inline: auto;
 }
 
+/* Navigation and anchor scrolling */
+
 html {
   scroll-behavior: smooth;
 }
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #3578b8;
+  outline-offset: 4px;
+}
+
+/* Reduced motion accessibility */
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Smaller screens */
+
+@media screen and (max-width: 736px) {
+  .iframe-container iframe {
+    margin-inline: 0;
+  }
+}
+
+/* Remove original template background */
+
+.wrapper.style3 {
+  background-image: none;
+  background-color: #000;
 }
