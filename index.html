@@ -40,7 +40,7 @@
       </ul>
     </nav>
     <!-- One -->
-    <section id="One" class="wrapper style3">
+    <section id="overview" class="wrapper style3">
       <div class="inner">
         <header class="align-center">
           <h1>Olympic Medal Trends</h1>
@@ -51,7 +51,7 @@
       </div>
     </section>
     <!-- Two -->
-    <section id="two" class="wrapper style2">
+    <section id="visualizations" class="wrapper style2">
       <div class="inner">
         <div class="box">
           <div class="content">
@@ -116,7 +116,7 @@
             <div class="iframe-container">
               <iframe
                 src="charts/sri/chart1a.html"
-                title="Host and non-host Olympic medal comparison"
+                title="Host nation medal performance and team comparison"
                 width="1150"
                 height="600"
                 loading="lazy">
@@ -130,14 +130,15 @@
             <div class="iframe-container">
               <iframe
                 src="charts/sri/chart1b.html"
+                title="Historical medal trends by hosting status and season"
                 width="1120"
                 height="650"
-                frameborder="0"
-              ></iframe>
-            </div>
+                loading="lazy">
+              </iframe>
+            </div>            
             <p class="align-center">
-              The third view is Heatmap with Season, Sport and Host City
-              filters. This shows which sports contribute the most to a Teams
+              The third view is an interactive heatmap with Season,
+              Team and Host City filters. This shows which sports contribute the most to a Teams
               overall medal count for any given city. This is useful to find
               outliers or identify which sports some Teams are strong/weak in
               and compare performance in different cities.
@@ -145,34 +146,36 @@
             <div class="iframe-container">
               <iframe
                 src="charts/sri/chart2.html"
+                title="Olympic medal distribution by sport, city and season"
                 width="1190"
                 height="570"
-                frameborder="0"
-              ></iframe>
-            </div>
+                loading="lazy">
+              </iframe>
+            </div>            
             <p class="align-center">
               The fourth view is a bi-directionally linked dashboard of a
-              scatter plot and bar chart. Users can control the number for Teams
-              they want to see (1-30). Users can also brush over the scatterplot
+              scatter plot and bar chart. Users can control the number of host cities
+              they want to explore (1–30). Users can also brush over the scatterplot
               or click on a city to see a detailed view of the number of teams
               that won medals and how many other cities had the same number of
               teams win and vice versa with the bar chart. We also have a custom
-              colour scheme to have unique colours for each Team.
+              colour scheme to have unique colour for each host city.
             </p>
             <div class="iframe-container">
               <iframe
                 src="charts/sri/chart3.html"
+                title="Interactive comparison of medal distribution across host cities"
                 width="970"
                 height="500"
-                frameborder="0"
-              ></iframe>
-            </div>
+                loading="lazy">
+              </iframe>
+            </div>            
           </div>
         </div>
       </div>
     </section>
 
-    <section id="two" class="wrapper style2">
+    <section id="tasks" class="wrapper style2">
       <div class="inner">
         <div class="box">
           <div class="content">
@@ -221,7 +224,7 @@
       </div>
     </section>
 
-    <section id="two" class="wrapper style2">
+    <section id="methodology" class="wrapper style2">
       <div class="inner">
         <div class="box">
           <div class="content">
@@ -533,6 +536,58 @@
       </div>
     </section>
 
+    <section id="credits" class="wrapper style2">
+      <div class="inner">
+        <div class="box">
+          <div class="content">
+            <header class="align-center">
+              <h2>Data Sources &amp; Credits</h2>
+            </header>
+    
+            <h3>Data Source</h3>
+            <p>
+              <a href="https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results">
+                120 Years of Olympic History: Athletes and Results
+              </a>
+              — Kaggle.
+            </p>
+    
+            <h3>Project Background</h3>
+            <p>
+              Originally developed as part of a collaborative
+              DSCI 320 project at the University of British Columbia.
+              This standalone website presents my individual
+              contribution on Geography and Seasons.
+            </p>
+    
+            <p>
+              <a href="https://github.com/AdwaitKulkarni58/DSCI320-project-website">
+                Original Group Project
+              </a>
+              |
+              <a href="https://github.com/actually-arri/Olympic_Medal_Trends">
+                Project Repository
+              </a>
+            </p>
+    
+            <h3>Template Attribution</h3>
+            <p>
+              Hielo by TEMPLATED, licensed under
+              <a href="https://creativecommons.org/licenses/by/3.0/">
+                Creative Commons Attribution 3.0
+              </a>.
+            </p>
+    
+            <p>
+              <a href="CREDITS.txt">Image Credits</a>
+              |
+              <a href="LICENSE.txt">Template License</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
